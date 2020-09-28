@@ -1,0 +1,6 @@
+<h1>{{@model.title}}</h1>
+
+<Comments
+  @comments={{@model.comments}}
+  @onSubmit={{this.createComment}}
+/>

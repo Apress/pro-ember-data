@@ -1,0 +1,13 @@
+@import "ember-modal-dialog/ember-modal-structure.css";
+@import "ember-modal-dialog/ember-modal-appearance.css";
+
+.btn.btn-link.text-danger {
+  padding: 0;
+}
+
+.ember-modal-dialog {
+  box-shadow: none;
+  border-radius: 0;
+  min-width: 400px;
+  padding: 20px;
+}

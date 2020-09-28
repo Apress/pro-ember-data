@@ -1,0 +1,18 @@
+<ModalDialog @translucentOverlay={{true}} @onClickOverlay={{this.goToContacts}}>
+  <h3>Edit Contact</h3>
+
+  <form {{on "submit" (fn this.editContact @model)}}>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <Input @class="form-control" @value={{this.newName}} @id="name" />
+    </div>
+    <div class="form-group">
+      <label for="phone-number">Phone Number</label>
+      <Input @class="form-control" @value={{this.newPhoneNumber}} @id="phone-number" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Save
+    </button>
+  </form>
+</ModalDialog>

@@ -1,0 +1,25 @@
+textarea {
+  width: 30%;
+  height: 100px;
+}
+
+.comment,
+.purchase {
+  border-bottom: 1px solid #aaa;
+  padding: 15px;
+}
+
+.comment-body {
+  color: #888888;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+nav a {
+  margin-right: 5px;
+}
+
+.purchase h4 {
+  margin: 0;
+}

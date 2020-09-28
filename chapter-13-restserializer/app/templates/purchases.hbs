@@ -1,0 +1,10 @@
+<div>
+  <h1>Purchases</h1>
+
+  {{#each @model.user.purchasedProducts as |product|}}
+    <div class="purchase">
+      <h4>{{product.title}} ({{product.constructor.modelName}})</h4>
+      <div>{{product.details}}</div>
+    </div>
+  {{/each}}
+</div>

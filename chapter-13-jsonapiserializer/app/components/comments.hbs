@@ -1,0 +1,9 @@
+<ul>
+  {{#each @comments as |comment|}}
+    <li>
+      {{comment.body}}
+    </li>
+  {{/each}}
+</ul>
+
+<CommentForm @onSubmit={{@onSubmit}} />

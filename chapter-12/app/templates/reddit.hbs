@@ -1,0 +1,14 @@
+{{#let @model.firstObject.subreddit as |subreddit|}}
+  <h1>{{subreddit.title}}</h1>
+  <p>{{subreddit.description}}</p>
+  <p>Members: {{subreddit.subscribers}}</p>
+{{/let}}
+<ul>
+  {{#each @model as |post|}}
+    <li>
+      <a href={{post.url}} target="_blank" rel="noopener noreferrer">
+        {{post.title}} ({{post.numComments}} comments)
+      </a>
+    </li>
+  {{/each}}
+</ul>

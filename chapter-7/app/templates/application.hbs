@@ -1,0 +1,13 @@
+<h1>
+  {{@model.name}}
+</h1>
+<div>
+  {{!-- Will trigger GET /api/contacts/1/company --}}
+  Company: {{@model.company.name}}
+</div>
+<ul>
+  {{!-- Will trigger GET /api/contacts/1/pets --}}
+  {{#each @model.pets as |pet|}}
+    <li>Pet: {{pet.name}}</li>
+  {{/each}}
+</ul>

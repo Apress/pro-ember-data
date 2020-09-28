@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12">
+    <p>
+      Can't find a contact?
+      <LinkTo @route="contacts.new">
+        Add one here.
+      </LinkTo>
+    </p>
+    <table class="table" id="contacts">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each @model as |contact|}}
+          <tr>
+            <td>
+              <LinkTo @route="contacts.contact" @model={{contact.id}}>
+                {{contact.name}}
+              </LinkTo>
+            </td>
+            <td>
+              {{contact.phoneNumber}}
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-link text-danger"
+                {{on "click" (fn this.deleteContact contact)}}>
+                Delete
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  {{outlet}}
+</div>
